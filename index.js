@@ -47,7 +47,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to IBM Watson powered Disease Prediction API");
 });
 
-app.get("/prediction", (req, res) => {
+app.post("/prediction", (req, res) => {
   const { symptoms } = req.body;
 
   let { values } = payload(symptoms);
