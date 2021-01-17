@@ -6,8 +6,8 @@ This project is currently deployed by Heroku at https://physibot.herokuapp.com/
 
 ## Project Screen Shot(s)
 
-![Homepage]("https://github.com/Ojas-Sharma/PhysiBot/blob/website/ss1.png")
-![Prediction Page]("https://github.com/Ojas-Sharma/PhysiBot/blob/website/ss2.png")
+![Homepage](https://github.com/Ojas-Sharma/PhysiBot/blob/website/ss1.png)
+![Prediction Page](https://github.com/Ojas-Sharma/PhysiBot/blob/website/ss2.png)
 
 ## Installation and Setup Instructions
 
