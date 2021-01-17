@@ -3,7 +3,8 @@
   color: white;
   display: flex;
   padding-top: 50px;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   background-color: rgb(15, 1, 94);
   background-image: radial-gradient(
     at 50% 100%,

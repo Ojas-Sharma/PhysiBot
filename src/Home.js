@@ -10,7 +10,7 @@ function Home() {
         <h1>Health diagnosis is a click away!</h1>
         <h2>
           Use our advanced Machine Learning algorithms to predict what disease
-          you could be suffering from and get the doctor's location instantly.
+          you could be suffering from and get the precautions instantly.
         </h2>
         <Link to="/predictor">
           <div className="home__button">Try it out for free</div>

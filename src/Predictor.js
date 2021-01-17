@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import "./Predictor.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { precautions, precaution_diseases } from "./precautions";
 
 function Predictor() {
   const [symptom, setSymptom] = useState("");
@@ -14,6 +15,7 @@ function Predictor() {
   const handleChange = (e) => {
     setSymptom(e.target.value);
   };
+  console.log(symptomsArray);
   const handleSubmit = async () => {
     setIsLoading(true);
     setSymptom("");
@@ -33,7 +35,14 @@ function Predictor() {
 
   const addSymptom = (e) => {
     e.preventDefault();
-    setSymptomArray([...symptomsArray, symptom]);
+    // Temporary
+    let inputSymptom = symptom;
+    if (inputSymptom === "itching") {
+      inputSymptom = "tching";
+    }
+    if (!symptomsArray.includes(inputSymptom)) {
+      setSymptomArray([...symptomsArray, inputSymptom]);
+    }
     setSymptom("");
   };
 
@@ -72,6 +81,9 @@ function Predictor() {
       {symptomsArray && (
         <h4 className="text">
           {`Your symptoms are: ${symptomsArray.map((symptom) => {
+            if (symptom === "tching") {
+              symptom = "itching";
+            }
             return ` ${symptom}`;
           })}
           `}
@@ -85,20 +97,21 @@ function Predictor() {
             According to your symptoms, you are possibly suffering form :{" "}
             <span>{disease}</span>
           </h3>
-          {/* <h3 className="text p"> Precautions: </h3> */}
-          <ul className="text">
-            Precautions:
-            <li className="text">Be sure to practice good hygiene.</li>
-            <li className="text">
-              Don't share clothing, towels, or other personal items.
-            </li>
-            <li className="text">
-              Wear clean clothes every day, particularly socks and underwear.
-            </li>
-            <li className="text">
-              Choose clothing and shoes that breathe well.
-            </li>
-          </ul>
+          {precaution_diseases.includes(disease) ? (
+            <ul className="text precaution_li">
+              Precautions:
+              {precautions[disease].map((precaution) => {
+                return <li className="text">{precaution}</li>;
+              })}
+            </ul>
+          ) : (
+            <h4 className="text">
+              {`Visit your local doctor as soon as possible. We can't provide
+              precautions for ${disease
+                .toString()
+                .toLowerCase()} at this moment.`}
+            </h4>
+          )}
           <h4 className="text">
             Recommendations for nearby doctors coming soon ...
           </h4>

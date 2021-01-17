@@ -36,6 +36,7 @@ input {
   height: 40px;
   font-size: 20px;
   text-align: center;
+  margin-top: 40px;
 }
 
 .text {
@@ -76,4 +77,8 @@ input {
 
 .reset {
   background: red;
+}
+
+.precaution_li {
+  padding: 0px 250px;
 }
