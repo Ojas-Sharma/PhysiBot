@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
 import bgImage from "./assets/home_1.jpg";
 import { Link } from "react-router-dom";

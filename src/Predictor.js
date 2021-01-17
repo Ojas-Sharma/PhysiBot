@@ -21,7 +21,9 @@ function Predictor() {
       symptoms: symptomsArray,
     };
     try {
-      let response = await axios.post(API_URL, body);
+      let response = await axios.post(API_URL, body, {
+        headers: { "Access-Control-Allow-Origin": "*" },
+      });
       setIsLoading(false);
       setDisease(response.data);
     } catch (error) {
