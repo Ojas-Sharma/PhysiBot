@@ -1,4 +1,5 @@
 .home {
+  overflow-x: hidden;
   color: white;
   display: flex;
   padding-top: 50px;

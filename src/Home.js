@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import bgImage from "./assets/home_1.jpg";
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div className="home">
@@ -10,9 +12,9 @@ function Home() {
           Use our advanced Machine Learning algorithms to predict what disease
           you could be suffering from and get the doctor's location instantly.
         </h2>
-        <a href="/">
+        <Link to="/predictor">
           <div className="home__button">Try it out for free</div>
-        </a>
+        </Link>
       </div>
       <div className="home__right half">
         <img alt="home bg" src={bgImage} />
