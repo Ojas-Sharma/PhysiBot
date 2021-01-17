@@ -1,3 +1,3 @@
 # PhysiBot
 
-Link to the Page: https://physibot.herokuapp.com/predictor
+Link to the Page: https://physibot.herokuapp.com/
